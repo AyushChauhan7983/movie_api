@@ -36,3 +36,135 @@
     transform: rotate(360deg);
   }
 }
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Card container */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  max-width: 300px;
+  margin: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Card image container */
+.card-image-container {
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card content */
+.card .content {
+  padding: 15px;
+}
+
+.card .content .header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card .content .description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* Card extra content */
+.card .extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+  background-color: #f7f7f7;
+}
+
+.card .extra .rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.card .extra .rating .icon {
+  margin-right: 5px;
+  color: gold;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between the rating and the year */
+}
+
+.rating .year {
+  margin-left: 170px;
+  font-size: 0.9rem;
+  color: #666; /* Optional: style the year text differently */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.form input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form {
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  .form input {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
